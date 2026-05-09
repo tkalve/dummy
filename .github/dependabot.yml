@@ -16,10 +16,15 @@ updates:
       interval: "weekly"
 
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/dummy-frontend"
     schedule:
       interval: "weekly"
-  
+
+  - package-ecosystem: "docker"
+    directory: "/dummy-api"
+    schedule:
+      interval: "weekly"
+
   - package-ecosystem: "docker-compose"
     directory: "/"
     schedule:
