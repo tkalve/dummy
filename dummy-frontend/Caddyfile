@@ -1,0 +1,15 @@
+:80 {
+	handle /health {
+		respond "OK" 200
+	}
+
+	handle /api/* {
+		reverse_proxy {$API_URL}
+	}
+
+	handle {
+		root * /usr/share/caddy
+		try_files {path} /index.html
+		file_server
+	}
+}

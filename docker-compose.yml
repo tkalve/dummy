@@ -1,0 +1,15 @@
+services:
+  dummy-api:
+    build: ./dummy-api
+    ports:
+      - "8080:8080"
+
+  dummy-frontend:
+    build: ./dummy-frontend
+    ports:
+      - "80:80"
+    environment:
+      API_URL: http://dummy-api:8080
+    depends_on:
+      dummy-api:
+        condition: service_healthy
