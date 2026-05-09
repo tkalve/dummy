@@ -1,20 +1,15 @@
-name: Build and Push Docker Images
+name: Build and Push dummy-api
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "dummy-api/**"
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        include:
-          - image: dummy-api
-            context: ./dummy-api
-          - image: dummy-frontend
-            context: ./dummy-frontend
 
     steps:
       - name: Checkout
@@ -29,12 +24,12 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build and push ${{ matrix.image }}
+      - name: Build and push dummy-api
         uses: docker/build-push-action@v6
         with:
-          context: ${{ matrix.context }}
+          context: ./dummy-api
           platforms: linux/amd64
           push: true
-          tags: tkalve/${{ matrix.image }}:latest
-          cache-from: type=gha,scope=${{ matrix.image }}
-          cache-to: type=gha,mode=max,scope=${{ matrix.image }}
+          tags: tkalve/dummy-api:latest
+          cache-from: type=gha,scope=dummy-api
+          cache-to: type=gha,mode=max,scope=dummy-api
