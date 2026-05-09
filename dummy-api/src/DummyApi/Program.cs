@@ -4,7 +4,6 @@ builder.Services.AddHealthChecks();
 // .__(.)< (mjau)
 // \___)
 
-
 var app = builder.Build();
 
 app.MapGet("/api/inspect", (HttpRequest request) =>
