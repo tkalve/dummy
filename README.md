@@ -2,9 +2,9 @@
 
 A minimal full-stack app used for diagnostics and experimentation.
 
-| Service  | Image | Build |
-| -------- | ----- | ----- |
-| API      | [![Docker Hub](https://img.shields.io/docker/v/tkalve/dummy-api?label=dummy-api&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/tkalve/dummy-api) | [![Build and Push dummy-api](https://github.com/tkalve/dummy/actions/workflows/docker-publish-api.yml/badge.svg)](https://github.com/tkalve/dummy/actions/workflows/docker-publish-api.yml) |
+| Service  | Image                                                                                                                                                                                   | Build                                                                                                                                                                                                      |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| API      | [![Docker Hub](https://img.shields.io/docker/v/tkalve/dummy-api?label=dummy-api&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/tkalve/dummy-api)                | [![Build and Push dummy-api](https://github.com/tkalve/dummy/actions/workflows/docker-publish-api.yml/badge.svg)](https://github.com/tkalve/dummy/actions/workflows/docker-publish-api.yml)                |
 | Frontend | [![Docker Hub](https://img.shields.io/docker/v/tkalve/dummy-frontend?label=dummy-frontend&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/tkalve/dummy-frontend) | [![Build and Push dummy-frontend](https://github.com/tkalve/dummy/actions/workflows/docker-publish-frontend.yml/badge.svg)](https://github.com/tkalve/dummy/actions/workflows/docker-publish-frontend.yml) |
 
 ## Stack
@@ -18,8 +18,8 @@ A minimal full-stack app used for diagnostics and experimentation.
 docker compose up --build
 ```
 
-- Frontend: http://localhost
-- API: http://localhost:8080
+- Frontend: <http://localhost:80>
+- API: <http://localhost:8080>
 
 ## Building & pushing images
 
