@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "dotnet-sdk"
+    directory: "/dummy-api"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem:  "npm"
+    directory: "/dummy-frontend"
+    schedule:
+      interval: "weekly"
